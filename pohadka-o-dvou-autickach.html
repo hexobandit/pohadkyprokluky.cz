@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- TraceBandit -->
+        <script>
+            // Track the time when the user opens the page
+            const startTime = Date.now();
+          
+            // When the user leaves the page (or closes it), calculate the duration
+            window.addEventListener('beforeunload', function() {
+              const endTime = Date.now();
+              const timeSpent = Math.round((endTime - startTime) / 1000); // Time in seconds
+              
+              // Send the time spent and page information to the Flask backend
+              navigator.sendBeacon('https://logmonitor.eu/log-time', JSON.stringify({
+                time_spent: timeSpent,
+                page: window.location.pathname  // Log the page they are visiting
+              }));
+            });
+          </script>
+         <!-- End TraceBandit -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Pohádky na dobrou noc, Pohádky do postele, Pohádky pro deti, Pohadky pro kluky" />
+        <meta name="author" content="Roman Oujezdský" />
+        <title>Pohádky pro kluky</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="https://pohadkyprokluky.cz">pohadkyprokluky.cz</a>
+                <!--
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Pohádky</a></li>
+                        </ul>
+                    </div>
+                --> 
+            </div>
+        </nav>
+        <!-- Page header with logo and tagline-->
+        <header class="py-5 bg-light border-bottom mb-4">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder">Pohádky pro kluky</h1>
+                    <p class="lead mb-0"> </p>
+                </div>
+            </div>
+        </header>
+        <!-- Page content-->
+        <div class="container">
+            <div class="row">
+                <!-- Blog entries-->
+                <div class="col-lg-12">
+                    <!-- Featured blog post-->
+                    <div class="card mb-4">
+                            <!-- ARTICLE-->
+                            <article>
+                                <!-- Post header-->
+                                <header class="mb-4">
+                                    <div class="card-body">
+                                        <!-- Post title-->
+                                        <h1 class="fw-bolder mb-1">Pohádka o dvou ztracených autíčkách</h1>
+                                        <!-- Post meta content-->
+                                        <div class="text-muted fst-italic mb-2">9 září, 2024</div>
+                                        <!-- Post categories-->
+                                        <a class="badge bg-secondary text-decoration-none link-light" href="#!">moře</a>
+                                        <a class="badge bg-secondary text-decoration-none link-light" href="#!">autíčka</a>
+                                        <a class="badge bg-secondary text-decoration-none link-light" href="#!">delfíni</a>
+                                    </div>
+                                </header>
+
+                                <!-- Post content-->
+                                <section class="mb-5">
+                                    <div class="card-body">
+
+                                        <!-- Preview image figure-->
+                                        <figure class="mb-4"><img class="img-fluid rounded" src="assets/auticka-zavod.png" alt="auticka Hotwheels zavod" /></figure>
+
+                                        <p class="fs-5 mb-4">
+                                            Byl jednou jeden krásný letní den, kdy slunce vyšlo nad širým mořem a jeho paprsky jemně hladily písečné duny které se rozhléhaly do pevniny kam až oko mohlo dohlédnout. 
+                                            Dvě malá autíčka Hot Wheels, Pepa (červený s plameny po bocích) a Tobík (modrý s bílými pruhy), se rozhodla vydat na velkou cestu – na závod kolem pobřeží.
+                                            </br></br>
+                                            Ráno se oba probudili v garáži nedaleko města. Oba nemohli dospat jak moc se těšili na tento den. <i>„Dobré ráno, Tobíku!“</i> zavolal Pepa z vedlejšího boxu.
+                                            </br></br>
+                                            <i>„Dobré ráno, Pepo! Dneska je ten den!“</i> odpověděl Tobík a oba se začali chystat na závod. Když vyjeli, město za nimi rychle zmizelo a před nimi se otevřela dlouhá silnice vedoucí k moři.
+                                        </p>
+                                        
+
+                                        <p class="fs-5 mb-4">
+                                            Když dorazili na místo, rozprostřely se před nimy obrovksé zlaté písečné duny. Písek byl tak jemný, že téměř připomínal živý organismus,
+                                            který se jen tak líně povaloval sem a tam jak se mu zrovna zachtělo. Oba chvíli mlčky upřeně pozorovali horizont až to Pepa už nevydržel a vykřikl <i>„Tohle bude závod století!“</i>.
+                                            </br></br>
+                                            Obě autíčka se postavila na startovní čáru, podívali se na sebe, popřáli si hodně štěstí a nastartovali motory. 
+                                            </br></br>
+                                            <i>„Tři, dva, jedna… start!“</i> zakřičeli společně a oba vyrazili plnou rychlostí.
+                                            </br></br>
+                                            Přeskakovali přes duny a projížděli písečnými zátokami. Písek létal od kol až téměř k obloze a po chvíly závodění nebylo vidět téměř na krok.
+                                            V tom se najednou se začal zvedat vítr a už tak rozvířený písek rozfoukal ještě víc.
+                                        </p>
+                                        
+                                        <figure class="mb-4"><img class="img-fluid rounded" src="assets/auticka-problem.png" alt="..." /></figure>
+    
+                                        <p class="fs-5 mb-4">
+                                            V zápalu závodu si ani jeden nevšimnul, že ztratili z dohledu svého kamaráda. První se zastavil Pepa a když se rozhlédnul kolem
+                                            zjistil, že je Tobík v nedohlednu.
+                                            <i>„Tobíku, kde jsi?“</i> zavolal, ale odpověď nikde. Písečná bouře je odřízla. Pepa začínal pomalu panikařit, ale vzpomněl si 
+                                            jak mu tatínek s maminkou říkali, že pokud se ztratí tak je nejlepší zůstat na místě a přivolat pomoc. Jenže koho volat uprostřed pouště, pomyslel si.
+                                            </br></br>
+                                            Když už si myslel, že je nejhůř, stalo něco úžasného – dva delfíni vyskočili jen kousek od něj! Pepa nevěřil svým očím a přijel se opatrně podívat 
+                                            přes nejbližší dunu. Před Pepou se rozléhalo obrovitánské moře a v něm skotačila skupinka delfínů. Musel jsem sjet z cesty, pomyslel si, zatím co mával na delfiny.
+                                            </br></br>
+                                            <i>„Potřebuješ pomoct?“</i> zavolal jeden z delfínů. 
+                                            </br></br>
+                                            <i>„Ano, ztratil jsem se! Nevíte, jak bych mohl najít svého kamaráda?“</i> zeptal se zoufale Pepa.
+                                        </p>
+                                        
+                                        <p class="fs-5 mb-4">
+                                            Delfíni se ponořili do vody aby se poradili, jenže než se stačili nadát, Pepa zaslechl známý zvuk – zvuk Tobíkova motoru. 
+                                            <i>„Pepo, tady jsem!“</i> zavolal Tobík. Obě autíčka se šťastně objala, že se našli a že se nikomu nic nestalo.
+                                        </p>
+                                        
+                                        
+                                        <p class="fs-5 mb-4">
+                                            Zbytek dne strávili na pláži s novými kamarády delfíny. Slunce zapadalo, obloha se zbarvovala do oranžových odstínů. 
+                                        </p>
+                                        
+                                        <p class="fs-5 mb-4">
+                                            Když se obloha začala plnit hvězdami, autíčka se rozhodla, že je čas vrátit se domů. <i>„Závod jsme dneska nedokončili,“</i> řekl Pepa, 
+                                            <i>„ale máme nové kamarády a úžasné zážitky!“</i>
+                                        </p>
+                                        
+                                        <figure class="mb-4"><img class="img-fluid rounded" src="assets/auticka-night.png" alt="..." /></figure>
+                                        
+                                        <p class="fs-5 mb-4">
+                                            Autíčka se vrátila do garáže, kde si pečlivě vyčistila písek z pneumatik, uložila se vedle sebe a unaveně, ale šťastně si chvilku ještě povídala
+                                            o tom ce se jim dnes přohodilo a o tom jak příště musejí být opatrnější a hlídat si jeden druhého aby se už nikdy neztratili.  
+                                            Ten den byl plný nečekaných událostí, ale díky přátelství to byl den, na který nikdy nezapomenou.
+                                        </p>
+                                    </div>
+                                </section>
+                            </article>
+
+                            <a class="btn btn-primary" href="index.html">Zpět na hlavní stránku →</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; pohadkyprokluky.cz 2024</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- TraceBandit -->
+        <script>
+            // Track the time when the user opens the page
+            const startTime = Date.now();
+          
+            // When the user leaves the page (or closes it), calculate the duration
+            window.addEventListener('beforeunload', function() {
+              const endTime = Date.now();
+              const timeSpent = Math.round((endTime - startTime) / 1000); // Time in seconds
+              
+              // Send the time spent and page information to the Flask backend
+              navigator.sendBeacon('https://logmonitor.eu/log-time', JSON.stringify({
+                time_spent: timeSpent,
+                page: window.location.pathname  // Log the page they are visiting
+              }));
+            });
+          </script>
+         <!-- End TraceBandit -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Pohádky na dobrou noc, Pohádky do postele, Pohádky pro deti, Pohadky pro kluky" />
+        <meta name="author" content="Roman Oujezdský" />
+        <title>Pohádky pro kluky</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- End Google Tag Manager (noscript) -->
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="https://pohadkyprokluky.cz/">pohadkyprokluky.cz</a>
+                <!--
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Pohádky</a></li>
+                        </ul>
+                    </div>
+                --> 
+            </div>
+        </nav>
+        <!-- Page header with logo and tagline-->
+        <header class="py-5 bg-light border-bottom mb-4">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder">Pohádky pro kluky</h1>
+                    <p class="lead mb-0"> </p>
+                </div>
+            </div>
+        </header>
+        <!-- Page content-->
+        <div class="container">
+            <div class="row">
+                <!-- Blog entries-->
+                <div class="col-lg-12">
+                    <!-- Featured blog post-->
+                    <div class="card mb-4">
+                            <!-- ARTICLE-->
+                            <article>
+                                <!-- Post header-->
+                                <header class="mb-4">
+                                    <div class="card-body">
+                                        <!-- Post title-->
+                                        <h1 class="fw-bolder mb-1">Pohádka o dvou letadýlkách</h1>
+                                        <!-- Post meta content-->
+                                        <div class="text-muted fst-italic mb-2">9 září, 2024</div>
+                                        <!-- Post categories-->
+                                        <a class="badge bg-secondary text-decoration-none link-light" href="#!">letadýlka</a>
+                                        <a class="badge bg-secondary text-decoration-none link-light" href="#!">autíčka</a>
+                                        <a class="badge bg-secondary text-decoration-none link-light" href="#!">traktor</a>
+                                    </div>
+                                </header>
+
+                                <!-- Post content-->
+                                <section class="mb-5">
+                                    <div class="card-body">
+
+                                        <!-- Preview image figure-->
+                                        <figure class="mb-4"><img class="img-fluid rounded" src="assets/letadylka-morning.png" alt="pohadky pro kluky letiste" /></figure>
+
+                                        <p class="fs-5 mb-4">
+                                            Byl jednou jeden krásný letní den, kdy slunce vyšlo nad letištěm a jemně ozářilo všechno kolem. Letiště nebylo velké, ale pro Kryštůfka a Matěje, dvě malá letadélka, bylo jako stvořené. 
+                                            Stálo na okraji vesnice a jeho ranvej se táhla mezi zelenými loukami plnými květin. Hangáry byly malované modrou barvou a na každé zdi bylo malé okénko, 
+                                            kterým dovnitř pronikalo ranní slunce. Když tam Kryštůfek s Matějem odpočívali, cítili se jako doma.
+                                        </p>
+                                        <p class="fs-5 mb-4">
+                                            Letiště také obklopovaly stromy a malý rybníček, kde si občas létali odpočinout kachny. Traktůrek Pepík, jejich věrný kamarád, měl své místo v kůlně vedle ranveje. 
+                                            Pepík byl červeně zbarvený rychlý traktůrek s plameny namalovanými na bocích, který vždycky rád pomohl, kdykoli byl někdo v nesnázích. 
+                                        </p>
+
+                                        <p class="fs-5 mb-4">
+                                            Traktůrek Pepík byl hrdý na svůj zářivý vzhled a svou rychlost, a i když nemohl létat jako Kryštůfek s Matějem, vždy se snažil stíhat jejich pohyb po obloze. 
+                                            A Monster Truck Max? Ten byl velký, modrý a měl obrovská kola, se kterými dokázal přejíždět přes cokoli – přes kameny, louže nebo i malé kopečky v okolí letiště. 
+                                            Byl silákem party, ale i on měl dobré srdce a vždycky fandil, když jeho přátelé létali.
+                                        </p>
+                                        <!-- <h2 class="fw-bolder mb-4 mt-5">Title</h2>-->
+
+                                        <figure class="mb-4"><img class="img-fluid rounded" src="assets/letadylka-loops.png" alt="pohadkyprokluky letadylka looping" /></figure>
+
+
+                                        <p class="fs-5 mb-4">
+                                            Ráno začínalo klidně. Na nebi bylo jen pár bílých obláčků, které pluly jako malé ovečky po modré obloze. Kryštůfek se protáhl ve svém hangáru a jeho vrtule se pomalu začala otáčet 
+                                            zatímco se ospale rozhlížel po hangáru.
+                                            </br></br>
+                                            <i>„Ahoj, Matěji!“</i> zavolal na svého kamaráda kterého spatřil ve vedlejším hangáru.
+                                            </br></br>
+                                            <i>„Dobré ráno, Kryštůfku!“</i>  odpověděl Matěj, jehož modrá křídla vypadala jak samo nebe. <i> „Jak ses vyspal?“</i> 
+                                            </br></br>    
+                                            <i>„Báječně, jsem naprosto odpočinutý.. nedáme si nějaké akrobatické kousky a závody?“</i> navrhl Kryštůfek zatím co si pomalu protahoval svá křídla.
+                                            Hned po tom co si oba vyčistili vrtule a posnídali vydatnou a zdravou snídani se oba kamarádi rozhodli vzlétnout. 
+                                            Jejich kamarádi – traktůrek Pepík a Monster Truck Max – už bylo nachystaní ranveje a mávali jim na pozdrav když stoupali k obloze.
+                                            </br></br>    
+                                            <i>„Ať se vám to dneska povede!“</i> křičel Pepík.
+                                            </br></br>    
+                                            <i>„Těším se na ty nejlepší loopingy co umíte!“</i>  dodal Monster Truck.
+                                        </p>
+                                        <p class="fs-5 mb-4">
+                                            Kryštůfek a Matěj letěli rychle a svižně, jakoby byli součástí větru. Nejprve se pokusili udělat velký looping, oba se otočili ve vzduchu, až se zdálo, že jejich křídla kreslí do nebe obří kruhy. 
+                                            Nebe bylo nádherné, modré s několika bílými oblaky, přes které se občas prořítili, až po sobě zanechali malou mlžnou stopu.
+                                            </br></br>
+                                            Pak přišel čas na závod. <i>„Závod až k lesu a zpátky?“</i> navrhl Matěj.
+                                            </br></br>
+                                            <i>„Platí!“</i> vykřikl Kryštůfek a oba vyrazili. Ale ještě než stihli doletět k cíli, stalo se něco nečekaného. Matějovi se začal přehřívat motor.
+                                        </p>
+
+                                        <figure class="mb-4"><img class="img-fluid rounded" src="assets/letadylka-problem.png" alt="..." /></figure>
+
+                                        <p class="fs-5 mb-4">
+                                            <i>„Pomoc, něco je špatně!“</i> volal zoufale Matěj. Kryštůfek si všiml kouře, který se z Matějova motoru začal valit.
+                                            </br></br>
+                                            Okamžitě zamířil k němu. <i>„Neboj se, Matěji! Hned to vyřešíme!“</i> řekl Kryštůfek a zamával na Pepíka, aby přivezl nářadí. 
+                                            Pepík i Monster Truck rychle přispěchali. Monster Truck Max opatrně podržel Matěje, zatímco Kryštůfek a Pepík opravovali jeho motor.
+                                            </br></br>
+                                            Za chvíli bylo vše v pořádku a Matěj mohl pokračovat. <i>„Děkuju vám kamarádi,“</i> řekl vděčně. <i>„Kdyby vás nebylo, nevím, co bych si počal.“</i>
+                                        </p>
+                                        
+                                        <p class="fs-5 mb-4">
+                                            Závod nakonec vyhrál Kryštůfek, ale Matěj se nezlobil. Oba si podali křídla a Matěj řekl: <i>„Dneska jsi byl nejlepší, Kryštůfku. Příště to ale určitě vyhraju já!“</i>
+                                            </br></br>
+                                            <i>„Už se nemůžu dočkat.“</i> odpověděl Kryštůfek se smíchem.
+                                        </p>
+
+                                        <figure class="mb-4"><img class="img-fluid rounded" src="assets/letadylka-night.png" alt="..." /></figure>
+
+                                        <p class="fs-5 mb-4">
+                                            Den pomalu ubíhal a slunce se začalo schovávat za obzor. Oba kamarádi se vrátili do svých hangárů, kde už je čekal teplý čaj a večeře. 
+                                            Když měli letadélka vyčištěné vrtule, zajeli každý do svého hangáru, zavřeli oči a brzy usnuli. Nebe nad nimi potemnělo a na obloze se objevily hvězdy. 
+                                            Byli šťastní, že mají jeden druhého a své kamarády, kteří je vždy podpoří.
+                                        </p>
+                                        <p class="fs-5 mb-4">
+                                            A tak skončil jejich den plný závodů, smíchu a přátelství, až do dalšího krásného rána, kdy zase vzlétnou k modré obloze.
+                                        </p>
+                                    </div>
+                                </section>
+                            </article>
+
+                            <a class="btn btn-primary" href="index.html">Zpět na hlavní stránku →</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; pohadkyprokluky.cz 2024</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

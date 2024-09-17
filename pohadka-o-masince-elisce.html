@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- TraceBandit -->
+        <script>
+            // Track the time when the user opens the page
+            const startTime = Date.now();
+          
+            // When the user leaves the page (or closes it), calculate the duration
+            window.addEventListener('beforeunload', function() {
+              const endTime = Date.now();
+              const timeSpent = Math.round((endTime - startTime) / 1000); // Time in seconds
+              
+              // Send the time spent and page information to the Flask backend
+              navigator.sendBeacon('https://logmonitor.eu/log-time', JSON.stringify({
+                time_spent: timeSpent,
+                page: window.location.pathname  // Log the page they are visiting
+              }));
+            });
+          </script>
+         <!-- End TraceBandit -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Pohádky na dobrou noc, Pohádky do postele, Pohádky pro deti, Pohadky pro kluky, Pohádka o mašince Elišce" />
+        <meta name="author" content="Roman Oujezdský" />
+        <title>Pohádka o mašince Elišce = Pohádky pro kluky</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- End Google Tag Manager (noscript) -->
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="https://pohadkyprokluky.cz">pohadkyprokluky.cz</a>
+                <!--
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Pohádky</a></li>
+                        </ul>
+                    </div>
+                --> 
+            </div>
+        </nav>
+        <!-- Page header with logo and tagline-->
+        <header class="py-5 bg-light border-bottom mb-4">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder">Pohádky pro kluky</h1>
+                    <p class="lead mb-0"> </p>
+                </div>
+            </div>
+        </header>
+        <!-- Page content-->
+        <div class="container">
+            <div class="row">
+                <!-- Blog entries-->
+                <div class="col-lg-12">
+                    <!-- Featured blog post-->
+                    <div class="card mb-4">
+                            <!-- ARTICLE-->
+                            <article>
+                                <!-- Post header-->
+                                <header class="mb-4">
+                                    <div class="card-body">
+                                        <!-- Post title-->
+                                        <h1 class="fw-bolder mb-1">Pohádka o mašince Elišce</h1>
+                                        <!-- Post meta content-->
+                                        <div class="text-muted fst-italic mb-2">9 září, 2024</div>
+                                        <!-- Post categories-->
+                                        <a class="badge bg-secondary text-decoration-none link-light" href="#!">mašinka</a>
+                                        <a class="badge bg-secondary text-decoration-none link-light" href="#!">kamarádi</a>
+                                        <a class="badge bg-secondary text-decoration-none link-light" href="#!">zvířátka</a>
+                                    </div>
+                                </header>
+
+                                <!-- Post content-->
+                                <section class="mb-5">
+                                    <div class="card-body">
+
+                                        <!-- Preview image figure-->
+                                        <figure class="mb-4"><img class="img-fluid rounded" src="assets/lokomotiva-alps.png" alt="Lokomotiva a zviratka" /></figure>
+
+                                        <p class="fs-5 mb-4">
+                                            V Alpách, kde jsou vrcholy hor pokryté sněhem i v létě a příroda se zelená v nekonečných odstínech zelené, jezdila malá parní mašinka Eliška. 
+                                            Její koleje vedly skrz údolí plná květin a kolem bublajících potoků. Kolem nich se rozprostíraly lesy, které byly domovem mnoha zvířátek. 
+                                            Eliška byla statečná mašinka, ale přece jen měla jednu velkou obavu – strašidelný tunel, který stál před ní jako temná brána do neznáma.
+                                        </p>
+                                        <p class="fs-5 mb-4">
+                                            Jednoho dne se Eliška zastavila před tímto tunelem. Byl to ten nejdelší tunel v celé trati a uvnitř byla taková tma, že nebylo vidět na konec. 
+                                            Mašinka se rozklepala a její malá světla slabě problikávala. <i>„Co když se tam něco skrývá? Co když se ztratím?“</i> přemýšlela.
+                                        </p>
+                                        <p class="fs-5 mb-4">
+                                            První, kdo k ní přišel, byl malý šedý králíček. Měl kulaté černé oči a měkkou, huňatou srst. Skákal z kopečku a zastavil se před Eliškou. 
+                                            <i>„Eliško, proč nejedeš dál?“</i> zeptal se králíček s úsměvem. <i>„Já se bojím toho tunelu,“</i> odpověděla mašinka tiše.
+                                        </p>
+                                        <p class="fs-5 mb-4">
+                                            Králíček se na chvilku zamyslel, podrbal si ouško a pak řekl: <i>„Já jsem sice rychlý, ale v tom tunelu je na mě moc tma. 
+                                            Ale co kdybys zavolala na lišku? Ta je chytrá a určitě ti poradí.“</i>
+                                        </p>
+                                        <p class="fs-5 mb-4">
+                                            A tak se objevila liška. Její rezavá srst zářila na slunci a její dlouhý ocas se pohupoval. Přiblížila se k Elišce a svým pronikavým pohledem se podívala na tunel. 
+                                            <i>„Hmm, já bych tam taky nejela. Tam je opravdu hodně tma,“</i> řekla liška, ale pak dodala: <i>„Zkusíme to ale jinak. Zavolám srnku, ta vždycky najde cestu.“</i>
+                                        </p>
+                                        <p class="fs-5 mb-4">
+                                            Srnka přiběhla ladně mezi stromy. Její jemná hnědá srst a dlouhé nohy ji dělaly krásnou a elegantní. Podívala se do tunelu a řekla: 
+                                            <i>„Já bych tam také nešla, protože tam nevidím žádnou cestičku. Ale znám někoho, kdo by mohl pomoci. Zavoláme na netopýra Karla. On je můj dávný přítel a ví, jak se pohybovat v temnotě.“</i>
+                                        </p>
+
+                                        <figure class="mb-4"><img class="img-fluid rounded" src="assets/lokomotiva-zviratka.png" alt="Lokomotiva a zviratka" /></figure>
+
+                                        <p class="fs-5 mb-4">
+                                            A tak se všichni zvířátka spojila a zavolala na netopýra Karla. Během okamžiku se z temnoty tunelu vynořil černý netopýr s blanitými křídly. 
+                                            Byl drobný, ale měl bystré uši a zvláštní šarm. <i>„Ahoj, Eliško,“</i> řekl vesele, <i>„slyšel jsem, že máš problém s tímhle tunelem.“</i>
+                                        </p>
+                                        <p class="fs-5 mb-4">
+                                            Eliška přikývla: <i>„Bojím se tam jet. Nevím, co mě tam čeká.“</i> Karel se zasmál a řekl: <i>„Ach, Eliško, v tom tunelu není nic, čeho by ses musela bát. 
+                                            Já tam létám každý den a nikdy jsem tam neviděl nic nebezpečného. Mám skvělý sluch který mi díky mému vnitřnímu "sonaru" umožňuje vidět i ve tmě, a kdyby tam byla nějaká překážka, okamžitě bych to věděl. 
+                                            Co kdybych letěl před tebou a dával ti vědět, jestli je vše v pořádku?“</i>
+                                        </p>
+                                        <p class="fs-5 mb-4">
+                                            Eliška se trochu uklidnila, ale stále ještě váhala. V tu chvíli se objevily světlušky. Byly drobné, s třpytivými křídly, a jejich světélkování bylo jemné a uklidňující. 
+                                            <i>„My ti také pomůžeme, Eliško,“</i> řekla jedna z nich. <i>„Proletíme se tunelem a vytvoříme pro tebe světelnou cestu, abys viděla, kam jedeš.“</i>
+                                        </p>
+                                        <p class="fs-5 mb-4">
+                                            Světlušky se rozprostřely po celé délce tunelu, jako kdyby kreslily světelnou stezku. Karel vzlétl a letěl před Eliškou, jeho uši napjatě naslouchaly, 
+                                            zda by se v tunelu neobjevilo něco podezřelého. <i>„Všechno je v pořádku, Eliško!“</i> zavolal na ni. 
+                                        </p>
+                                        <p class="fs-5 mb-4">
+                                            Eliška se tedy zhluboka nadechla, pustila páru a pomalu se rozjela. Díky světlu světlušek viděla celou cestu, a když slyšela Karlův hlas, 
+                                            jak jí povídá, že je vše v pořádku, její strach se postupně vytrácel. Když projela tunel, na druhé straně se otevřelo krásné horské údolí, 
+                                            plné slunečního světla, s jasně modrým nebem a zářivě zelenými stromy.
+                                        </p>
+
+                                        <figure class="mb-4"><img class="img-fluid rounded" src="assets/lokomotiva-konec.png" alt="Lokomotiva a zviratka" /></figure>
+
+                                        <p class="fs-5 mb-4">
+                                            <i>„Dokázala jsi to, Eliško!“</i> volala zvířátka, která ji sledovala. Mašinka se na ně usmála, vypustila oblaka páry a s radostí zvolala: 
+                                            <i>„Děkuji vám, přátelé! Teď už se tunelu nikdy nebudu bát!“</i>
+                                        </p>
+                                        <p class="fs-5 mb-4">
+                                            Od té doby Eliška jezdila tunelem bez obav, protože věděla, že má kolem sebe skvělé přátele, kteří jí vždy pomohou. Kdykoli musela projet nějakým novým, neznámým tunelem, 
+                                            hlasitě si zouhoukala, aby si dodala odvahu, a vždy si připomněla, že na druhé straně na ni čeká světlo.
+                                        </p>
+                                        <p class="fs-5 mb-4">
+                                            Zvířátka na ni vždy mávala, když projížděla kolem, a Eliška jim houkala na pozdrav, jako poděkování za jejich přátelství. Ať už jela po známé trase nebo objevovala nové cesty, 
+                                            věděla, že nikdy nebude sama a že její přátelé jsou s ní, i když třeba nejsou zrovna nablízku.
+                                        </p>
+                                        <p class="fs-5 mb-4">
+                                            Tak Eliška projížděla horami, přes údolí a lesy, vždy připravena na nové dobrodružství, a už nikdy neměla strach z temnoty. 
+                                            Protože věděla, že i v největší tmě mohou přátelé přinést světlo.
+                                        </p>
+                                    </div>
+                                    <div class="card-header">KNOWLEDGE CORNER</div>
+                                    <div class="card-body">
+                                        <h2 class="fw-bolder mb-4 mt-5">Věděli jste, že...</h2>
+                                        <p class="fs-5 mb-4">
+                                            Netopýři používají echolokaci (někdy se tomu laicky říká “sonar”) k navigaci a lovu ve tmě. Princip funguje následovně:
+                                            </br></br>
+                                            1.	Vysílání zvuku: Netopýři vydávají vysokofrekvenční zvuky (ultrazvuk), které jsou pro lidské ucho neslyšitelné. 
+                                            </br>
+                                            2.	Odraz zvuku: Tyto zvuky se odrážejí od objektů v jejich okolí, jako jsou překážky, hmyz nebo terén.
+                                            </br>
+                                            3.	Zachycení ozvěny: Netopýři mají velmi citlivé uši, které zachycují odražené zvukové vlny (ozvěny).
+                                            </br>
+                                            4.	Interpretace: Na základě rozdílu v čase, intenzitě a směru mezi vyslaným a odraženým zvukem dokáží netopýři “vidět” své okolí i ve tmě. To jim pomáhá identifikovat překážky, kořist a prostor, ve kterém se pohybují.
+                                            </br></br>
+                                            Netopýři používají echolokaci ke zjištění vzdálenosti, velikosti, tvaru a pohybu objektů. Tímto způsobem mohou přesně určit polohu kořisti nebo se vyhnout překážkám.
+                                        </p>
+
+                                        <figure class="mb-4"><img class="img-fluid rounded" src="assets/netopyr.png" alt="netopyr pro deti" /></figure>
+
+                                    </div>
+
+                                </section>
+                            </article>
+
+                            <a class="btn btn-primary" href="index.html">Zpět na hlavní stránku →</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; pohadkyprokluky.cz 2024</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
