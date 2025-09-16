@@ -1,34 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- TraceBandit -->
-        <script>
-            // Track the time when the user opens the page
-            const startTime = Date.now();
-          
-            // When the user leaves the page (or closes it), calculate the duration
-            window.addEventListener('beforeunload', function() {
-              const endTime = Date.now();
-              const timeSpent = Math.round((endTime - startTime) / 1000); // Time in seconds
-              
-              // Send the time spent and page information to the Flask backend
-              navigator.sendBeacon('https://logmonitor.eu/log-time', JSON.stringify({
-                time_spent: timeSpent,
-                page: window.location.pathname  // Log the page they are visiting
-              }));
-            });
-          </script>
-         <!-- End TraceBandit -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Pohádky na dobrou noc, Pohádky do postele, Pohadky pro deti, Pohadky pro kluky" />
-        <meta name="author" content="Roman Oujezdský" />
+        <meta name="author" content="Roman Emphonic" />
         <title>Pohádky pro kluky</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P7T6HJN109"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-P7T6HJN109');
+    </script>
     <body>
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -52,8 +43,8 @@
         <header class="py-5 bg-light border-bottom mb-4">
             <div class="container">
                 <div class="text-center my-5">
+                    <img class="img-fluid rounded" src="assets/kluk.png" style="width: 50px; height: auto;" />
                     <h1 class="fw-bolder">Pohádky pro kluky</h1>
-                    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
                     <p class="lead mb-0">Pohádky na dobrou noc pro malé divochy, kteří milují autíčka, letadýlka "and everything in between"</p>
                 </div>
             </div>
@@ -80,10 +71,20 @@
                         <div class="col-lg-6">
                             <!-- Blog post-->
                             <div class="card mb-4">
-                                <a href="pohadka-o-dvou-autickach.html"><img class="card-img-top" src="assets/auticka-zavod.png" alt="Pohadka o autickach, zavod, more, auticka Hotwheels" /></a>
+                                <a href="pohadka-o-hasicskem-aute.html"><img class="card-img-top" src="assets/hasicske-auto-main.png" alt="Pohádka o hasičském autě Tomášovi" /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">16 září, 2025</div>
+                                    <h2 class="card-title h4">Pohádka o hasičském autě Tomášovi</h2>
+                                    <p class="card-text">Tomáš je hrdinné hasičské auto, které zachrání kočku Micku z hořící továrny...</p>
+                                    <a class="btn btn-primary" href="pohadka-o-hasicskem-aute.html">Celá pohádka zde →</a>
+                                </div>
+                            </div>
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="pohadka-o-dvou-autickach.html"><img class="card-img-top" src="assets/auticka-zavod.png" alt="Pohadka o autickach, zavod, more, auticka Hot Wheels" /></a>
                                 <div class="card-body">
                                     <div class="small text-muted">10 září, 2024</div>
-                                    <h2 class="card-title h4">Pohádka o dvou ztracených autíčkách</h2>
+                                    <h2 class="card-title h4">Pohádka o dvou Hot Wheels autíčkách</h2>
                                     <p class="card-text">Dobrodružství Pepy a Tobíka: Závody na dunách a přátelství s delfíny...</p>
                                     <a class="btn btn-primary" href="pohadka-o-dvou-autickach.html">Celá pohádka zde →</a>
                                 </div>
@@ -98,36 +99,46 @@
                                     <a class="btn btn-primary" href="pohadka-o-masince-elisce.html">Celá pohádka zde →</a>
                                 </div>
                             </div>
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="pohadka-o-ztracenem-vyfuku.html"><img class="card-img-top" src="assets/auticka-vyfuk.png" alt="pohádka o ztraceném výfuku" /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">12 prosince, 2024</div>
+                                    <h2 class="card-title h4">Pohádka o ztraceném výfuku</h2>
+                                    <p class="card-text">Pohádka o přátelství a vzájemné pomoci.</p>
+                                    <a class="btn btn-primary" href="pohadka-o-peprence-a-solnicce-cundr.html">Celá pohádka zde →</a>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-6">
                             <!-- Blog post-->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="assets/cargoship-main.png" alt="..." /></a>
+                                <a href="pohadka-o-nakladni-lodi.html"><img class="card-img-top" src="assets/lod-nakladni.png" alt="Nakladni lod, pohadka" /></a>
                                 <div class="card-body">
-                                    <div class="small text-muted">January 1, 2023</div>
-                                    <h2 class="card-title h4">Pohádka o nákladní lodi</h2>
-                                    <p class="card-text">Pohádka v přípravě.</p>
-                                    <a class="btn btn-primary" href="#!">Pohádka v přípravě.</a>
+                                    <div class="small text-muted">18 září, 2024</div>
+                                    <h2 class="card-title h4">Pohádka o nákladní lodi Aničce</h2>
+                                    <p class="card-text">Někdy je skvělé vyzkoušet něco nového, ale nakonec zjistíme, že nejlepší je být sám sebou a dělat to, co nám jde nejlépe</p>
+                                    <a class="btn btn-primary" href="pohadka-o-nakladni-lodi.html">Celá pohádka zde →</a>
                                 </div>
                             </div>
                             <!-- Blog post-->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="assets/buldozer-main.png" alt="..." /></a>
+                                <a href="pohadka-o-bagrovi.html"><img class="card-img-top" src="assets/buldozer-main.png" alt="pohadka-o-bagrovi" /></a>
                                 <div class="card-body">
-                                    <div class="small text-muted">January 1, 2023</div>
-                                    <h2 class="card-title h4">Pohádka o buldozeru a traktorovi</h2>
-                                    <p class="card-text">Pohádka v přípravě.</p>
-                                    <a class="btn btn-primary" href="#!">Pohádka v přípravě.</a>
+                                    <div class="small text-muted">08 prosince, 2024</div>
+                                    <h2 class="card-title h4">Pohádka o bagrovi</h2>
+                                    <p class="card-text">Pohádka o bagru Bertíkovi a jeho zimní misi</p>
+                                    <a class="btn btn-primary" href="pohadka-o-bagrovi.html">Celá pohádka zde →</a>
                                 </div>
                             </div>
                             <!-- Blog post-->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="assets/solnicky-main.png" alt="..." /></a>
+                                <a href="pohadka-o-peprence-a-solnicce-cundr.html"><img class="card-img-top" src="assets/solnicky-main.png" alt="pohádka o pepřence a solničce" /></a>
                                 <div class="card-body">
-                                    <div class="small text-muted">January 1, 2023</div>
+                                    <div class="small text-muted">30 září, 2024</div>
                                     <h2 class="card-title h4">Pohádka o solničce a pepřence</h2>
-                                    <p class="card-text">Solnička a pepřenka na čundru pod stanem..</p>
-                                    <a class="btn btn-primary" href="#!">Pohádka v přípravě.</a>
+                                    <p class="card-text">Solnička a pepřenka na čundru pod stanem s tajemným kamarádem..</p>
+                                    <a class="btn btn-primary" href="pohadka-o-peprence-a-solnicce-cundr.html">Celá pohádka zde →</a>
                                 </div>
                             </div>
                         </div>

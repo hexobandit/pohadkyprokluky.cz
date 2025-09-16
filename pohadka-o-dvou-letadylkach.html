@@ -1,34 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- TraceBandit -->
-        <script>
-            // Track the time when the user opens the page
-            const startTime = Date.now();
-          
-            // When the user leaves the page (or closes it), calculate the duration
-            window.addEventListener('beforeunload', function() {
-              const endTime = Date.now();
-              const timeSpent = Math.round((endTime - startTime) / 1000); // Time in seconds
-              
-              // Send the time spent and page information to the Flask backend
-              navigator.sendBeacon('https://logmonitor.eu/log-time', JSON.stringify({
-                time_spent: timeSpent,
-                page: window.location.pathname  // Log the page they are visiting
-              }));
-            });
-          </script>
-         <!-- End TraceBandit -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Pohádky na dobrou noc, Pohádky do postele, Pohádky pro deti, Pohadky pro kluky" />
-        <meta name="author" content="Roman Oujezdský" />
+        <meta name="author" content="Roman Emphonic" />
         <title>Pohádky pro kluky</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P7T6HJN109"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-P7T6HJN109');
+    </script>
     <body>
         <!-- End Google Tag Manager (noscript) -->
         <!-- Responsive navbar-->
@@ -52,10 +43,10 @@
         <!-- Page header with logo and tagline-->
         <header class="py-5 bg-light border-bottom mb-4">
             <div class="container">
-                <div class="text-center my-5">
-                    <h1 class="fw-bolder">Pohádky pro kluky</h1>
-                    <p class="lead mb-0"> </p>
+                <div class="text-center">
+                    <img class="img-fluid rounded" src="assets/kluk.png" style="width: 50px; height: auto;" />
                 </div>
+            </div>
             </div>
         </header>
         <!-- Page content-->
