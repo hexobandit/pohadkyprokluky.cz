@@ -1,15 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs-CZ">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Pohádky na dobrou noc, Pohádky do postele, Pohádky pro deti, Pohadky pro kluky, Pohádka o mašince Elišce" />
+        <meta name="description" content="Pohádka o statečné mašince Elišce, která překonává strach ze strašidelného tunelu a zachrání lesní zvířátka. Český příběh na dobrou noc o statečnosti a pomoci druhým." />
+        <meta name="keywords" content="pohádka o mašince, vlak, tunel, statečnost, lesní zvířátka, pohádky na dobrou noc, české pohádky pro kluky" />
         <meta name="author" content="Roman Emphonic" />
-        <title>Pohádka o mašince Elišce = Pohádky pro kluky</title>
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="cs-CZ" />
+        <title>Pohádka o mašince Elišce - Statečná lokomotiva | Pohádky pro kluky</title>
+        
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Pohádka o mašince Elišce - Statečná lokomotiva" />
+        <meta property="og:description" content="Statečná mašinka Eliška překonává strach ze strašidelného tunelu a zachrání lesní zvířátka" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://pohadkyprokluky.cz/pohadka-o-masince-elisce.html" />
+        <meta property="og:image" content="https://pohadkyprokluky.cz/assets/lokomotiva-alps.png" />
+        <meta property="og:locale" content="cs_CZ" />
+        <meta property="og:site_name" content="Pohádky pro kluky" />
+        <meta property="article:author" content="Roman Emphonic" />
+        <meta property="article:published_time" content="2024-09-11" />
+        <meta property="article:section" content="Pohádky" />
+        <meta property="article:tag" content="mašinka" />
+        <meta property="article:tag" content="vlak" />
+        <meta property="article:tag" content="statečnost" />
+        
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Pohádka o mašince Elišce - Statečná lokomotiva" />
+        <meta name="twitter:description" content="Statečná mašinka překonává strach a zachrání zvířátka" />
+        <meta name="twitter:image" content="https://pohadkyprokluky.cz/assets/lokomotiva-alps.png" />
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- Prevent flash of white on dark mode -->
+        <script>
+            (function() {
+                if (localStorage.getItem('darkMode') === 'enabled') {
+                    document.documentElement.classList.add('dark-mode-instant');
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', function() {
+                            document.body.classList.add('dark-mode');
+                            setTimeout(function() {
+                                document.documentElement.classList.remove('dark-mode-instant');
+                            }, 50);
+                        });
+                    } else {
+                        document.body.classList.add('dark-mode');
+                        setTimeout(function() {
+                            document.documentElement.classList.remove('dark-mode-instant');
+                        }, 50);
+                    }
+                }
+            })();
+        </script>
+        
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Pohádka o mašince Elišce - Statečná lokomotiva",
+            "description": "Statečná mašinka Eliška překonává strach ze strašidelného tunelu a zachrání lesní zvířátka",
+            "image": "https://pohadkyprokluky.cz/assets/lokomotiva-alps.png",
+            "author": {
+                "@type": "Person",
+                "name": "Roman Emphonic"
+            },
+            "publisher": {
+                "@type": "Person",
+                "name": "Roman Emphonic"
+            },
+            "datePublished": "2024-09-11",
+            "dateModified": "2024-09-11",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://pohadkyprokluky.cz/pohadka-o-masince-elisce.html"
+            },
+            "genre": "Dětská pohádka",
+            "inLanguage": "cs-CZ",
+            "keywords": "pohádka, mašinka, vlak, tunel, statečnost, zvířátka",
+            "about": [
+                {
+                    "@type": "Thing",
+                    "name": "Vlaky a lokomotivy",
+                    "description": "Příběh o statečné mašince a železniční dopravě"
+                },
+                {
+                    "@type": "Thing", 
+                    "name": "Statečnost",
+                    "description": "Překonávání strachu a pomoc druhým"
+                }
+            ],
+            "audience": {
+                "@type": "Audience",
+                "audienceType": "Děti 3-10 let"
+            }
+        }
+        </script>
     </head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P7T6HJN109"></script>
@@ -25,22 +114,17 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="https://pohadkyprokluky.cz">pohadkyprokluky.cz</a>
-                <!--
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Pohádky</a></li>
-                        </ul>
+                <a class="navbar-brand" href="https://pohadkyprokluky.cz/">pohadkyprokluky.cz</a>
+                <div class="ms-auto">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="darkModeToggle" style="width: 50px; height: 25px; cursor: pointer;">
+                        <label class="form-check-label text-white ms-2" for="darkModeToggle" style="cursor: pointer;">
+                            <span id="darkModeIcon">🌙</span>
+                        </label>
                     </div>
-                --> 
+                </div>
             </div>
-        </nav>
-        <!-- Page header with logo and tagline-->
+        </nav>        <!-- Page header with logo and tagline-->
         <header class="py-5 bg-light border-bottom mb-4">
             <div class="container">
                 <div class="text-center">
@@ -179,10 +263,20 @@
         </div>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; pohadkyprokluky.cz 2024</p></div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+            <div class="container">
+                <div class="text-center">
+                    <div class="footer-vehicles mb-3">
+                        <span style="--delay: 0">🚗</span>
+                        <span style="--delay: 1">✈️</span>
+                        <span style="--delay: 2">🚂</span>
+                        <span style="--delay: 3">🚒</span>
+                        <span style="--delay: 4">🚢</span>
+                        <span style="--delay: 5">🏗️</span>
+                    </div>
+                    <p class="m-0 text-center text-white">Copyright &copy; pohadkyprokluky.cz 2024</p>
+                </div>
+            </div>
+        </footer>        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>

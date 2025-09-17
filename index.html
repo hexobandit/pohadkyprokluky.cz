@@ -1,15 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs-CZ">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Pohádky na dobrou noc, Pohádky do postele, Pohadky pro deti, Pohadky pro kluky" />
+        <meta name="description" content="Pohádky na dobrou noc pro kluky - autíčka, letadýlka, bagry a hasičské vozy. Bezplatné české pohádky s edukačními prvky pro děti od 3 do 10 let." />
+        <meta name="keywords" content="pohádky pro kluky, pohádky na dobrou noc, české pohádky, autíčka, letadýlka, bagry, hasičské auto, free pohádky, pohádky zdarma" />
         <meta name="author" content="Roman Emphonic" />
-        <title>Pohádky pro kluky</title>
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="cs-CZ" />
+        <title>Pohádky pro kluky - České pohádky o autíčkách, letadýlkách a bagrech | pohadkyprokluky.cz</title>
+        
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Pohádky pro kluky - České pohádky na dobrou noc" />
+        <meta property="og:description" content="Bezplatné české pohádky pro kluky o autíčkách, letadýlkách, bagrech a dalších strojích. Ideální na dobrou noc!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pohadkyprokluky.cz/" />
+        <meta property="og:image" content="https://pohadkyprokluky.cz/assets/kluk.png" />
+        <meta property="og:locale" content="cs_CZ" />
+        <meta property="og:site_name" content="Pohádky pro kluky" />
+        
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Pohádky pro kluky - České pohádky na dobrou noc" />
+        <meta name="twitter:description" content="Bezplatné české pohádky pro kluky o autíčkách, letadýlkách a bagrech" />
+        <meta name="twitter:image" content="https://pohadkyprokluky.cz/assets/kluk.png" />
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- Prevent flash of white on dark mode -->
+        <script>
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.documentElement.classList.add('dark-mode-preload');
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.body.classList.add('dark-mode');
+                    document.documentElement.classList.remove('dark-mode-preload');
+                });
+            }
+        </script>
+        <style>
+            .dark-mode-preload { background-color: #2a2a2a; }
+        </style>
+        
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Pohádky pro kluky",
+            "url": "https://pohadkyprokluky.cz/",
+            "description": "Bezplatné české pohádky na dobrou noc pro kluky o autíčkách, letadýlkách, bagrech a dalších strojích",
+            "inLanguage": "cs-CZ",
+            "author": {
+                "@type": "Person",
+                "name": "Roman Emphonic"
+            },
+            "publisher": {
+                "@type": "Person",
+                "name": "Roman Emphonic"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://pohadkyprokluky.cz/?search={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+            },
+            "mainEntity": {
+                "@type": "ItemList",
+                "name": "České pohádky pro kluky",
+                "description": "Kolekce pohádek na dobrou noc o vozidlech a strojích",
+                "itemListElement": [
+                    {
+                        "@type": "CreativeWork",
+                        "name": "Pohádka o dvou letadýlkách",
+                        "url": "https://pohadkyprokluky.cz/pohadka-o-dvou-letadylkach.html",
+                        "description": "Příběh o dvou kamarádech letadýlkách Kryštůfkovi a Matějovi"
+                    },
+                    {
+                        "@type": "CreativeWork", 
+                        "name": "Pohádka o hasičském autě Tomášovi",
+                        "url": "https://pohadkyprokluky.cz/pohadka-o-hasicskem-aute.html",
+                        "description": "Hrdinný příběh hasičského auta Tomáše"
+                    },
+                    {
+                        "@type": "CreativeWork",
+                        "name": "Pohádka o dvou Hot Wheels autíčkách",
+                        "url": "https://pohadkyprokluky.cz/pohadka-o-dvou-autickach.html", 
+                        "description": "Dobrodružství Hot Wheels autíček Pepy a Tobíka"
+                    }
+                ]
+            }
+        }
+        </script>
     </head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P7T6HJN109"></script>
@@ -25,18 +109,14 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="#!">pohadkyprokluky.cz</a>
-                <!--
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Pohádky</a></li>
-                        </ul>
+                <div class="ms-auto">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="darkModeToggle" style="width: 50px; height: 25px; cursor: pointer;">
+                        <label class="form-check-label text-white ms-2" for="darkModeToggle" style="cursor: pointer;">
+                            <span id="darkModeIcon">🌙</span>
+                        </label>
                     </div>
-                --> 
+                </div>
             </div>
         </nav>
         <!-- Page header with logo and tagline-->
@@ -45,15 +125,15 @@
                 <div class="text-center my-5">
                     <img class="img-fluid rounded" src="assets/kluk.png" style="width: 50px; height: auto;" />
                     <h1 class="fw-bolder">Pohádky pro kluky</h1>
-                    <p class="lead mb-0">Pohádky na dobrou noc pro malé divochy, kteří milují autíčka, letadýlka "and everything in between"</p>
+                    <p class="lead mb-0">Pohádky na dobrou noc pro malé divochy, kteří milují autíčka, letadýlka a vše, co má motor</p>
                 </div>
             </div>
         </header>
         <!-- Page content-->
-        <div class="container">
+        <main class="container">
             <div class="row">
                 <!-- Blog entries-->
-                <div class="col-lg-8">
+                <section class="col-lg-8" aria-label="Pohádky">
                     <!-- Featured blog post-->
                     <div class="card mb-4">
                         <a href="pohadka-o-dvou-letadylkach.html"><img class="card-img-top" src="assets/letadylka-loops.png" alt="..." /></a>
@@ -157,9 +237,9 @@
                         </ul>
                     </nav>
                 -->
-                </div>
+                </section>
                 <!-- Side widgets-->
-                <div class="col-lg-4">
+                <aside class="col-lg-4" aria-label="Informace o webu">
                     <!-- Search widget-->
                     <div class="card mb-4">
                         <div class="card-header">O co tady jde</div>
@@ -201,12 +281,24 @@
                         <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
                     </div>
                     -->
-                </div>
+                </aside>
             </div>
-        </div>
+        </main>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; pohadkyprokluky.cz 2024</p></div>
+            <div class="container">
+                <div class="text-center">
+                    <div class="footer-vehicles mb-3">
+                        <span style="--delay: 0">🚗</span>
+                        <span style="--delay: 1">✈️</span>
+                        <span style="--delay: 2">🚂</span>
+                        <span style="--delay: 3">🚒</span>
+                        <span style="--delay: 4">🚢</span>
+                        <span style="--delay: 5">🏗️</span>
+                    </div>
+                    <p class="m-0 text-center text-white">Copyright &copy; pohadkyprokluky.cz 2024</p>
+                </div>
+            </div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
