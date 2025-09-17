@@ -1,15 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs-CZ">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Pohádky na dobrou noc, Pohádky do postele, Pohádky pro deti, Pohadky pro kluky, Pohádka o hasičském autě" />
+        <meta name="description" content="Pohádka o hrdinném hasičském autě Tomášovi, který zachrání kočku Micku z hořící továrny. Český příběh na dobrou noc o statečnosti a pomoci v nebezpečí." />
+        <meta name="keywords" content="pohádka hasičské auto, hasiči, záchrana, kočka, hrdina, pohádky na dobrou noc, české pohádky pro kluky, statečnost" />
         <meta name="author" content="Roman Emphonic" />
-        <title>Pohádka o hasičském autě Tomášovi - Pohádky pro kluky</title>
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="cs-CZ" />
+        <title>Pohádka o hasičském autě Tomášovi - Hrdinná záchrana | Pohádky pro kluky</title>
+        
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Pohádka o hasičském autě Tomášovi - Hrdinná záchrana" />
+        <meta property="og:description" content="Hrdinné hasičské auto Tomáš zachrání kočku Micku z hořící továrny" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://pohadkyprokluky.cz/pohadka-o-hasicskem-aute.html" />
+        <meta property="og:image" content="https://pohadkyprokluky.cz/assets/hasicske-auto-main.png" />
+        <meta property="og:locale" content="cs_CZ" />
+        <meta property="og:site_name" content="Pohádky pro kluky" />
+        <meta property="article:author" content="Roman Emphonic" />
+        <meta property="article:published_time" content="2024-09-16" />
+        <meta property="article:section" content="Pohádky" />
+        <meta property="article:tag" content="hasičské auto" />
+        <meta property="article:tag" content="záchrana" />
+        <meta property="article:tag" content="hasiči" />
+        
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Pohádka o hasičském autě Tomášovi - Hrdinná záchrana" />
+        <meta name="twitter:description" content="Hrdinné hasičské auto zachrání kočku z požáru" />
+        <meta name="twitter:image" content="https://pohadkyprokluky.cz/assets/hasicske-auto-main.png" />
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- Prevent flash of white on dark mode -->
+        <script>
+            (function() {
+                if (localStorage.getItem('darkMode') === 'enabled') {
+                    document.documentElement.classList.add('dark-mode-instant');
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', function() {
+                            document.body.classList.add('dark-mode');
+                            setTimeout(function() {
+                                document.documentElement.classList.remove('dark-mode-instant');
+                            }, 50);
+                        });
+                    } else {
+                        document.body.classList.add('dark-mode');
+                        setTimeout(function() {
+                            document.documentElement.classList.remove('dark-mode-instant');
+                        }, 50);
+                    }
+                }
+            })();
+        </script>
+        
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Pohádka o hasičském autě Tomášovi - Hrdinná záchrana",
+            "description": "Hrdinné hasičské auto Tomáš zachrání kočku Micku z hořící továrny",
+            "image": "https://pohadkyprokluky.cz/assets/hasicske-auto-main.png",
+            "author": {
+                "@type": "Person",
+                "name": "Roman Emphonic"
+            },
+            "publisher": {
+                "@type": "Person",
+                "name": "Roman Emphonic"
+            },
+            "datePublished": "2024-09-16",
+            "dateModified": "2024-09-16",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://pohadkyprokluky.cz/pohadka-o-hasicskem-aute.html"
+            },
+            "genre": "Dětská pohádka",
+            "inLanguage": "cs-CZ",
+            "keywords": "pohádka, hasičské auto, hasiči, záchrana, statečnost",
+            "about": [
+                {
+                    "@type": "Thing",
+                    "name": "Hasičské auto",
+                    "description": "Příběh o hrdinném hasičském autě a záchranné práci"
+                },
+                {
+                    "@type": "Thing", 
+                    "name": "Záchrana zvířat",
+                    "description": "Pomoc zvířatům v nebezpečí"
+                }
+            ],
+            "audience": {
+                "@type": "Audience",
+                "audienceType": "Děti 3-10 let"
+            }
+        }
+        </script>
     </head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P7T6HJN109"></script>
@@ -25,19 +114,15 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="https://pohadkyprokluky.cz">pohadkyprokluky.cz</a>
-                <!--
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Pohádky</a></li>
-                        </ul>
+                <a class="navbar-brand" href="https://pohadkyprokluky.cz/">pohadkyprokluky.cz</a>
+                <div class="ms-auto">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="darkModeToggle" style="width: 50px; height: 25px; cursor: pointer;">
+                        <label class="form-check-label text-white ms-2" for="darkModeToggle" style="cursor: pointer;">
+                            <span id="darkModeIcon">🌙</span>
+                        </label>
                     </div>
-                --> 
+                </div>
             </div>
         </nav>
         <!-- Page header with logo and tagline-->
@@ -162,10 +247,20 @@
         </div>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; pohadkyprokluky.cz 2024</p></div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+            <div class="container">
+                <div class="text-center">
+                    <div class="footer-vehicles mb-3">
+                        <span style="--delay: 0">🚗</span>
+                        <span style="--delay: 1">✈️</span>
+                        <span style="--delay: 2">🚂</span>
+                        <span style="--delay: 3">🚒</span>
+                        <span style="--delay: 4">🚢</span>
+                        <span style="--delay: 5">🏗️</span>
+                    </div>
+                    <p class="m-0 text-center text-white">Copyright &copy; pohadkyprokluky.cz 2024</p>
+                </div>
+            </div>
+        </footer>        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>

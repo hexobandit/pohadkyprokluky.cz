@@ -1,15 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs-CZ">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Pohádky na dobrou noc, Pohádky do postele, Pohádky pro deti, Pohadky pro kluky" />
+        <meta name="description" content="Pohádka o dvou Hot Wheels autíčkách Pepovi a Tobíkovi - dobrodružství na písečných dunách s delfíny. Český příběh na dobrou noc o přátelství a vzájemné pomoci." />
+        <meta name="keywords" content="pohádka hot wheels, autíčka, duny, delfíni, pohádky na dobrou noc, české pohádky pro kluky, přátelství, dobrodružství" />
         <meta name="author" content="Roman Emphonic" />
-        <title>Pohádky pro kluky</title>
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="cs-CZ" />
+        <title>Pohádka o dvou Hot Wheels autíčkách - Pepa a Tobík | Pohádky pro kluky</title>
+        
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Pohádka o dvou Hot Wheels autíčkách - Pepa a Tobík" />
+        <meta property="og:description" content="Dobrodružství Hot Wheels autíček na písečných dunách s novými kamarády delfíny" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://pohadkyprokluky.cz/pohadka-o-dvou-autickach.html" />
+        <meta property="og:image" content="https://pohadkyprokluky.cz/assets/auticka-zavod.png" />
+        <meta property="og:locale" content="cs_CZ" />
+        <meta property="og:site_name" content="Pohádky pro kluky" />
+        <meta property="article:author" content="Roman Emphonic" />
+        <meta property="article:published_time" content="2024-09-10" />
+        <meta property="article:section" content="Pohádky" />
+        <meta property="article:tag" content="hot wheels" />
+        <meta property="article:tag" content="autíčka" />
+        <meta property="article:tag" content="delfíni" />
+        
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Pohádka o dvou Hot Wheels autíčkách - Pepa a Tobík" />
+        <meta name="twitter:description" content="Dobrodružství Hot Wheels autíček na písečných dunách" />
+        <meta name="twitter:image" content="https://pohadkyprokluky.cz/assets/auticka-zavod.png" />
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- Prevent flash of white on dark mode -->
+        <script>
+            (function() {
+                if (localStorage.getItem('darkMode') === 'enabled') {
+                    document.documentElement.classList.add('dark-mode-instant');
+                    // Apply body dark mode immediately when DOM loads
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', function() {
+                            document.body.classList.add('dark-mode');
+                            // Remove instant class after a short delay to allow transitions
+                            setTimeout(function() {
+                                document.documentElement.classList.remove('dark-mode-instant');
+                            }, 50);
+                        });
+                    } else {
+                        document.body.classList.add('dark-mode');
+                        setTimeout(function() {
+                            document.documentElement.classList.remove('dark-mode-instant');
+                        }, 50);
+                    }
+                }
+            })();
+        </script>
+        
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Pohádka o dvou Hot Wheels autíčkách - Pepa a Tobík",
+            "description": "Dobrodružství Hot Wheels autíček na písečných dunách s novými kamarády delfíny",
+            "image": "https://pohadkyprokluky.cz/assets/auticka-zavod.png",
+            "author": {
+                "@type": "Person",
+                "name": "Roman Emphonic"
+            },
+            "publisher": {
+                "@type": "Person",
+                "name": "Roman Emphonic"
+            },
+            "datePublished": "2024-09-10",
+            "dateModified": "2024-09-10",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://pohadkyprokluky.cz/pohadka-o-dvou-autickach.html"
+            },
+            "genre": "Dětská pohádka",
+            "inLanguage": "cs-CZ",
+            "keywords": "pohádka, hot wheels, autíčka, duny, delfíni, přátelství",
+            "about": [
+                {
+                    "@type": "Thing",
+                    "name": "Hot Wheels autíčka",
+                    "description": "Příběh o závodních autíčkách a jejich dobrodružstvích"
+                },
+                {
+                    "@type": "Thing", 
+                    "name": "Delfíni",
+                    "description": "Setkání s mořskými savci a jejich komunikace"
+                }
+            ],
+            "audience": {
+                "@type": "Audience",
+                "audienceType": "Děti 3-10 let"
+            }
+        }
+        </script>
     </head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P7T6HJN109"></script>
@@ -24,28 +115,22 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="https://pohadkyprokluky.cz">pohadkyprokluky.cz</a>
-                <!--
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Pohádky</a></li>
-                        </ul>
+                <a class="navbar-brand" href="https://pohadkyprokluky.cz/">pohadkyprokluky.cz</a>
+                <div class="ms-auto">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="darkModeToggle" style="width: 50px; height: 25px; cursor: pointer;">
+                        <label class="form-check-label text-white ms-2" for="darkModeToggle" style="cursor: pointer;">
+                            <span id="darkModeIcon">🌙</span>
+                        </label>
                     </div>
-                --> 
+                </div>
             </div>
         </nav>
         <!-- Page header with logo and tagline-->
         <header class="py-5 bg-light border-bottom mb-4">
             <div class="container">
-                <div class="container">
-                    <div class="text-center">
-                        <img class="img-fluid rounded" src="assets/kluk.png" style="width: 50px; height: auto;" />
-                    </div>
+                <div class="text-center">
+                    <img class="img-fluid rounded" src="assets/kluk.png" style="width: 50px; height: auto;" />
                 </div>
             </div>
         </header>
@@ -140,6 +225,28 @@
                                             Ten den byl plný nečekaných událostí, ale díky přátelství to byl den, na který nikdy nezapomenou.
                                         </p>
                                     </div>
+                                    
+                                    <div class="card-header">KNOWLEDGE CORNER</div>
+                                    <div class="card-body">
+                                        <h2 class="fw-bolder mb-4 mt-5">Jak delfíni komunikují:</h2>
+                                        <p class="fs-5 mb-4">
+                                            Delfíni jsou jedni z nejchytřejších živočichů na naší planetě! Komunikují mezi sebou pomocí zvláštních zvuků - pískání, cvakání a klikání. Každý delfín má své vlastní unikátní pískání, které funguje jako jeho jméno. Když se delfín narodí, vytvoří si během prvních měsíců života svůj vlastní "píšťalový podpis" a ostatní delfíni se ho naučí rozpoznávat.
+                                        </p>
+                                        <p class="fs-5 mb-4">
+                                            Delfíni také používají echolokaci - vydávají zvuky, které se odrážejí od předmětů kolem nich. Podle ozvěny dokážou poznat, jak je předmět velký, jaký má tvar a jak daleko je. Je to jako vidět ušima! Díky tomu se dokážou orientovat i v kalné vodě nebo úplné tmě.
+                                        </p>
+
+                                        <figure class="mb-4"><img class="img-fluid rounded" src="assets/auticka-delfin.png" alt="..." /></figure>
+
+                                        <h2 class="fw-bolder mb-4 mt-5">Jak vznikají písečné duny:</h2>
+                                        <p class="fs-5 mb-4">
+                                            Písečné duny jsou jako obří kopce z písku, které vytváří vítr. Když vítr fouká stále ze stejného směru, postupně přenáší zrnka písku a hromadí je na jednom místě. Některé duny se dokážou pohybovat - vítr odnáší písek z jedné strany duny a ukládá ho na druhé straně. Tak se celá duna může během roku posunout o několik metrů!
+                                        </p>
+                                        <p class="fs-5 mb-4">
+                                            Největší písečné duny na světě můžou být vysoké přes 400 metrů - to je jako mrakodrap! V České republice sice nemáme pouště s dunami, ale malé písečné přesypy najdeme třeba v Národním parku Podyjí nebo u Hodonína. Hot Wheels autíčka by měla na dunách speciální pneumatiky s hlubokým vzorkem, aby se v písku nebořila!
+                                        </p>
+                                    </div>
+                                    
                                 </section>
                             </article>
 
@@ -150,10 +257,20 @@
         </div>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; pohadkyprokluky.cz 2024</p></div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+            <div class="container">
+                <div class="text-center">
+                    <div class="footer-vehicles mb-3">
+                        <span style="--delay: 0">🚗</span>
+                        <span style="--delay: 1">✈️</span>
+                        <span style="--delay: 2">🚂</span>
+                        <span style="--delay: 3">🚒</span>
+                        <span style="--delay: 4">🚢</span>
+                        <span style="--delay: 5">🏗️</span>
+                    </div>
+                    <p class="m-0 text-center text-white">Copyright &copy; pohadkyprokluky.cz 2024</p>
+                </div>
+            </div>
+        </footer>        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>

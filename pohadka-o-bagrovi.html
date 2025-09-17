@@ -10,7 +10,19 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-    </head>
+        <!-- Prevent flash of white on dark mode -->
+        <script>
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.documentElement.classList.add('dark-mode-preload');
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.body.classList.add('dark-mode');
+                    document.documentElement.classList.remove('dark-mode-preload');
+                });
+            }
+        </script>
+        <style>
+            .dark-mode-preload { background-color: #2a2a2a; }
+        </style>    </head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P7T6HJN109"></script>
     <script>
@@ -20,27 +32,45 @@
 
         gtag('config', 'G-P7T6HJN109');
     </script>
+    
+    <!-- Prevent flash of white on dark mode -->
+    <script>
+        (function() {
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.documentElement.classList.add('dark-mode-instant');
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', function() {
+                        document.body.classList.add('dark-mode');
+                        setTimeout(function() {
+                            document.documentElement.classList.remove('dark-mode-instant');
+                        }, 50);
+                    });
+                } else {
+                    document.body.classList.add('dark-mode');
+                    setTimeout(function() {
+                        document.documentElement.classList.remove('dark-mode-instant');
+                    }, 50);
+                }
+            }
+        })();
+    </script>
+    
     <body>
         <!-- End Google Tag Manager (noscript) -->
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="https://pohadkyprokluky.cz">pohadkyprokluky.cz</a>
-                <!--
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Pohádky</a></li>
-                        </ul>
+                <a class="navbar-brand" href="https://pohadkyprokluky.cz/">pohadkyprokluky.cz</a>
+                <div class="ms-auto">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="darkModeToggle" style="width: 50px; height: 25px; cursor: pointer;">
+                        <label class="form-check-label text-white ms-2" for="darkModeToggle" style="cursor: pointer;">
+                            <span id="darkModeIcon">🌙</span>
+                        </label>
                     </div>
-                --> 
+                </div>
             </div>
-        </nav>
-        <!-- Page header with logo and tagline-->
+        </nav>        <!-- Page header with logo and tagline-->
         <header class="py-5 bg-light border-bottom mb-4">
             <div class="container">
                 <div class="text-center">
@@ -217,9 +247,21 @@
                                     </div>
                                     <div class="card-header">KNOWLEDGE CORNER</div>
                                     <div class="card-body">
-                                        <h2 class="fw-bolder mb-4 mt-5">Věděli jste, že...</h2>
+                                        <h2 class="fw-bolder mb-4 mt-5">Zajímavé fakty o bagrech a zimních strojích:</h2>
                                         <p class="fs-5 mb-4">
-                                            Bagry mají jedinečný hydraulický systém, který jim umožňuje zvedat těžká břemena a pohybovat se s velkou přesností. Zajímavé je, že bagry mohou vykopat až 1000 kubíků zeminy za den, což je množství, které by ručně trvalo vykopat stovkám lidí několik týdnů!
+                                            <strong>🔧 Hydraulická síla:</strong> Bagry mají jedinečný hydraulický systém, který jim umožňuje zvedat těžká břemena a pohybovat se s velkou přesností. Zajímavé je, že bagry mohou vykopat až 1000 kubíků zeminy za den, což je množství, které by ručně trvalo vykopat stovkám lidí několik týdnů!
+                                        </p>
+                                        
+                                        <p class="fs-5 mb-4">
+                                            <strong>❄️ Zimní hrdinové:</strong> Sněhové pluhy dokážou odhrnout sníh rychlostí až 60 km/h! Největší sněhové pluhy dokážou najednou odhrnout sníh z cesty široké 6 metrů. To je skoro jako celá šířka fotbalového hřiště!
+                                        </p>
+                                        
+                                        <p class="fs-5 mb-4">
+                                            <strong>🧂 Sůl na silnicích:</strong> Proč se sypává sůl na silnice? Sůl snižuje bod mrazu vody. Zatímco čistá voda mrzne při 0°C, slana voda (voda se solí) může zmrznout až při teplotě -9°C. Proto sůl na silnicích roztává led a sníh!
+                                        </p>
+                                        
+                                        <p class="fs-5 mb-4">
+                                            <strong>🏗️ Bagry jsou univerzální:</strong> Moderní bagry se používají nejen na stavbách, ale také jako hasičské vozy (dokážou rozbořit zeď při požáru), záchranné stroje při povodních, nebo dokonce jako speciální bagry pro práci pod vodou!
                                         </p>
                                 
                                         <figure class="mb-4"><img class="img-fluid rounded" src="assets/buldozer-main.png" alt="bagr-hydraulika" /></figure>
@@ -235,10 +277,20 @@
         </div>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; pohadkyprokluky.cz 2024</p></div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+            <div class="container">
+                <div class="text-center">
+                    <div class="footer-vehicles mb-3">
+                        <span style="--delay: 0">🚗</span>
+                        <span style="--delay: 1">✈️</span>
+                        <span style="--delay: 2">🚂</span>
+                        <span style="--delay: 3">🚒</span>
+                        <span style="--delay: 4">🚢</span>
+                        <span style="--delay: 5">🏗️</span>
+                    </div>
+                    <p class="m-0 text-center text-white">Copyright &copy; pohadkyprokluky.cz 2024</p>
+                </div>
+            </div>
+        </footer>        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>

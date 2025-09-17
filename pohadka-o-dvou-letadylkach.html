@@ -1,15 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs-CZ">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Pohádky na dobrou noc, Pohádky do postele, Pohádky pro deti, Pohadky pro kluky" />
+        <meta name="description" content="Pohádka o dvou letadýlkách Kryštůfkovi a Matějovi - český příběh na dobrou noc o přátelství, loopinzích a vzájemné pomoci. S Knowledge Corner o tom, jak létají letadla." />
+        <meta name="keywords" content="pohádka o letadýlkách, pohádky na dobrou noc, české pohádky pro kluky, letadla, looping, akrobacie, přátelství" />
         <meta name="author" content="Roman Emphonic" />
-        <title>Pohádky pro kluky</title>
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="cs-CZ" />
+        <title>Pohádka o dvou letadýlkách - Kryštůfek a Matěj | Pohádky pro kluky</title>
+        
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Pohádka o dvou letadýlkách - Kryštůfek a Matěj" />
+        <meta property="og:description" content="Český příběh na dobrou noc o dvou kamarádech letadýlkách, kteří dělají loopingy a pomáhají si v nesnázích" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://pohadkyprokluky.cz/pohadka-o-dvou-letadylkach.html" />
+        <meta property="og:image" content="https://pohadkyprokluky.cz/assets/letadylka-loops.png" />
+        <meta property="og:locale" content="cs_CZ" />
+        <meta property="og:site_name" content="Pohádky pro kluky" />
+        <meta property="article:author" content="Roman Emphonic" />
+        <meta property="article:published_time" content="2024-09-09" />
+        <meta property="article:section" content="Pohádky" />
+        <meta property="article:tag" content="letadýlka" />
+        <meta property="article:tag" content="přátelství" />
+        <meta property="article:tag" content="looping" />
+        
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Pohádka o dvou letadýlkách - Kryštůfek a Matěj" />
+        <meta name="twitter:description" content="Český příběh na dobrou noc o dvou kamarádech letadýlkách" />
+        <meta name="twitter:image" content="https://pohadkyprokluky.cz/assets/letadylka-loops.png" />
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- Prevent flash of white on dark mode -->
+        <script>
+            (function() {
+                if (localStorage.getItem('darkMode') === 'enabled') {
+                    document.documentElement.classList.add('dark-mode-instant');
+                    // Apply body dark mode immediately when DOM loads
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', function() {
+                            document.body.classList.add('dark-mode');
+                            // Remove instant class after a short delay to allow transitions
+                            setTimeout(function() {
+                                document.documentElement.classList.remove('dark-mode-instant');
+                            }, 50);
+                        });
+                    } else {
+                        document.body.classList.add('dark-mode');
+                        setTimeout(function() {
+                            document.documentElement.classList.remove('dark-mode-instant');
+                        }, 50);
+                    }
+                }
+            })();
+        </script>
+        
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Pohádka o dvou letadýlkách - Kryštůfek a Matěj",
+            "description": "Český příběh na dobrou noc o dvou kamarádech letadýlkách, kteří dělají loopingy a pomáhají si v nesnázích",
+            "image": "https://pohadkyprokluky.cz/assets/letadylka-loops.png",
+            "author": {
+                "@type": "Person",
+                "name": "Roman Emphonic"
+            },
+            "publisher": {
+                "@type": "Person",
+                "name": "Roman Emphonic"
+            },
+            "datePublished": "2024-09-09",
+            "dateModified": "2024-09-09",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://pohadkyprokluky.cz/pohadka-o-dvou-letadylkach.html"
+            },
+            "genre": "Dětská pohádka",
+            "inLanguage": "cs-CZ",
+            "keywords": "pohádka, letadýlka, looping, přátelství, děti",
+            "about": [
+                {
+                    "@type": "Thing",
+                    "name": "Letadla",
+                    "description": "Příběh o letadýlkách a jejich dobrodružstvích"
+                },
+                {
+                    "@type": "Thing", 
+                    "name": "Přátelství",
+                    "description": "Témata přátelství a vzájemné pomoci"
+                }
+            ],
+            "audience": {
+                "@type": "Audience",
+                "audienceType": "Děti 3-10 let"
+            }
+        }
+        </script>
     </head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P7T6HJN109"></script>
@@ -26,18 +117,14 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="https://pohadkyprokluky.cz/">pohadkyprokluky.cz</a>
-                <!--
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Pohádky</a></li>
-                        </ul>
+                <div class="ms-auto">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="darkModeToggle" style="width: 50px; height: 25px; cursor: pointer;">
+                        <label class="form-check-label text-white ms-2" for="darkModeToggle" style="cursor: pointer;">
+                            <span id="darkModeIcon">🌙</span>
+                        </label>
                     </div>
-                --> 
+                </div>
             </div>
         </nav>
         <!-- Page header with logo and tagline-->
@@ -46,7 +133,6 @@
                 <div class="text-center">
                     <img class="img-fluid rounded" src="assets/kluk.png" style="width: 50px; height: auto;" />
                 </div>
-            </div>
             </div>
         </header>
         <!-- Page content-->
@@ -152,6 +238,21 @@
                                             A tak skončil jejich den plný závodů, smíchu a přátelství, až do dalšího krásného rána, kdy zase vzlétnou k modré obloze.
                                         </p>
                                     </div>
+                                    
+                                    <div class="card-header">KNOWLEDGE CORNER</div>
+                                    <div class="card-body">
+                                        <h2 class="fw-bolder mb-4 mt-5">Jak letadla dělají loopingy:</h2>
+                                        <p class="fs-5 mb-4">
+                                            Looping je akrobatický manévr, při kterém letadlo opisuje ve vzduchu celý kruh. Pilot musí mít dostatečnou rychlost a pak zatáhne řídící páku dozadu. To způsobí, že výškové kormidlo na ocase letadla se vychýlí nahoru a letadlo začne stoupat. Díky rychlosti a správnému úhlu letadlo pokračuje v kruhu - nejdřív letí nahoru, pak se otočí hlavou dolů a nakonec dokončí celý kruh.
+                                        </p>
+                                        <p class="fs-5 mb-4">
+                                            Během loopingu působí na pilota odstředivá síla, která ho tlačí do sedadla. Tato síla může být několikrát větší než gravitace Země - říkáme tomu přetížení nebo "G síla". Zkušení akrobatičtí piloti musí být ve velmi dobré fyzické kondici, aby tyto síly zvládli. Zajímavé je, že ve vrcholu loopingu, když je letadlo hlavou dolů, pilot necítí, že by visel vzhůru nohama - odstředivá síla ho stále tlačí do sedadla!
+                                        </p>
+                                        <p class="fs-5 mb-4">
+                                            Letadla létají díky tvaru svých křídel. Křídlo má speciální profil - nahoře je více zaoblené než dole. Když se letadlo pohybuje vpřed, vzduch proudící přes horní část křídla musí urazit delší vzdálenost než vzduch pod křídlem. To vytváří rozdíl tlaku - nahoře je nižší tlak než dole - a tento rozdíl vytváří vztlakovou sílu, která drží letadlo ve vzduchu. Čím rychleji letadlo letí, tím větší je vztlaková síla!
+                                        </p>
+                                    </div>
+                                    
                                 </section>
                             </article>
 
@@ -162,9 +263,20 @@
         </div>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; pohadkyprokluky.cz 2024</p></div>
-        </footer>
-        <!-- Bootstrap core JS-->
+            <div class="container">
+                <div class="text-center">
+                    <div class="footer-vehicles mb-3">
+                        <span style="--delay: 0">🚗</span>
+                        <span style="--delay: 1">✈️</span>
+                        <span style="--delay: 2">🚂</span>
+                        <span style="--delay: 3">🚒</span>
+                        <span style="--delay: 4">🚢</span>
+                        <span style="--delay: 5">🏗️</span>
+                    </div>
+                    <p class="m-0 text-center text-white">Copyright &copy; pohadkyprokluky.cz 2024</p>
+                </div>
+            </div>
+        </footer>        <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
